@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brandpreventie – Preventieportal</title>
+  <meta name="description" content="Praktische tips om brand in huis te voorkomen. Onderdeel van de Preventieportal trainingscasus." />
+  <style>
+    :root{
+      --bg:#0f172a; --panel:#111827; --card:#1f2937; --text:#e5e7eb;
+      --muted:#cbd5e1; --accent:#22c55e; --accent-2:#3b82f6; --accent-3:#f59e0b; --ring:#94a3b8;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial}
+    a{color:inherit;text-decoration:none}
+    a:focus,button:focus{outline:2px solid var(--ring);outline-offset:2px}
+    .container{max-width:1000px;margin-inline:auto;padding:24px}
+    header{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));border-bottom:1px solid rgba(255,255,255,.08)}
+    .topbar{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .logo{width:36px;height:36px;border-radius:8px;background:conic-gradient(from 180deg,var(--accent),var(--accent-2),var(--accent-3));display:grid;place-items:center}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 12px;border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,.08)}
+    h1{font-size:clamp(26px,3vw,34px);margin:18px 0 4px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    @media(min-width:860px){.grid{grid-template-columns:1.3fr .9fr}}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px}
+    .pill{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);margin-left:8px}
+    .list{padding-left:18px;margin:8px 0 0}
+    .cta{display:inline-block;margin-top:10px;background:var(--accent);color:#06130a;font-weight:700;padding:10px 14px;border-radius:10px;border:1px solid rgba(0,0,0,.2)}
+    footer{margin-top:24px;padding:16px;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+    .sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;padding:0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand" aria-label="Preventieportal">
+        <span class="logo" aria-hidden="true">🛡️</span>
+        <a href="index.html" aria-label="Terug naar start">Preventieportal</a>
+      </div>
+      <nav aria-label="Primaire navigatie">
+        <ul>
+          <li><a href="index.html#tips">Tips</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><span class="pill">🔥 Brand</span></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<main class="container" id="content">
+    <h1>Brandpreventie</h1>
+    <p class="muted">Voorkom brand in huis met deze praktische tips. Controleer ook je rookmelders en vluchtroute.</p>
+<section class="grid" aria-labelledby="brand-tips">
+      <article class="card" role="region" aria-labelledby="brand-tips">
+        <h2 id="brand-tips">Top 6 tips</h2>
+        <ul class="list">
+          <li>Blaas kaarsen uit als je een kamer verlaat of gaat slapen.</li>
+          <li>Test rookmelders maandelijks; vervang batterijen tijdig.</li>
+          <li>Laat pannen nooit onbeheerd op het vuur staan.</li>
+          <li>Rol stekkerdozen niet op tijdens gebruik; voorkom warmteophoping.</li>
+          <li>Houd ladergebruik in de gaten; laad ’s nachts liever niet op.</li>
+          <li>Zorg voor een blusdeken of kleine brandblusser in de keuken.</li>
+        </ul>
+        <a class="cta" href="index.html#tips">← Terug naar alle categorieën</a>
+      </article>
+
+<aside class="card" role="complementary" aria-labelledby="checklist">
+        <h2 id="checklist">Snelcheck</h2>
+        <ul class="list">
+          <li>Rookmelders per verdieping aanwezig?</li>
+          <li>Vluchtroute vrij en geoefend?</li>
+          <li>Geen stapels papier bij warmtebronnen?</li>
+          <li>Stekkerdozen niet doorgelust?</li>
+        </ul>
+        <p class="muted">Tip: maak een herinnering om rookmelders maandelijks te testen.</p>
+      </aside>
+    </section>
+<footer>
+      <small>© <span id="y"></span> Preventieportal – Trainingsdemo. Inhoud ter illustratie.</small>
+    </footer>
+  </main>
+
+<script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
