@@ -12,7 +12,7 @@ als samenwerkingsplatform:
 	## Teamindeling
 - **Team 1**: Andre Koelman, Ben ter Haar, Eric Hollander
 - **Team 2**: Fabian de Jong, Jeroen Eissens, Lisette Mulder
-- **Team 3**: Marc Rekers, Michel Wolvenkamp, Robin van der Vegte (+ Robin van der Vegte 2 als extra)
+- **Team 3**: Ingmar, Kevin, Daniël en Raymond (Marc Rekers, Michel Wolvenkamp, Robin van der Vegte (+ Robin van der Vegte 2 als extra)
 	## Planning
 1. Opzetten repository en documentatie (Hoofdstuk 1)
 2. Aanmaken Issues en samenwerken via PR’s (Hoofdstuk 2)
