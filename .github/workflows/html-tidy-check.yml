@@ -1,0 +1,35 @@
+name: HTML Tidy Check
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install tidy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tidy
+
+      - name: Validate HTML in src/
+        shell: bash
+        run: |
+          shopt -s nullglob
+          files=(src/*.html)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "Geen HTML-bestanden gevonden in src/. Sla controle over."
+            exit 0
+          fi
+          failed=0
+          for f in "${files[@]}"; do
+            echo "Valideren: $f"
+            # -e: toon fouten, -q: quiet output, -utf8 voor encoding
+            # Tidy geeft exitcode 1 bij fouten → we vangen die af en tellen handmatig
+            tidy -q -e -utf8 "$f" || failed=1
+            echo "----------------------------------------"
+          done
+          exit $failed
