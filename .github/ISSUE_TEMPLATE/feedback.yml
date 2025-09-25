@@ -1,0 +1,108 @@
+name: "Feedback op Preventieportal"
+description: "Meld een fout, kapotte link, inhoudelijke verbetering of idee."
+title: "[Feedback]: "
+labels: ["feedback"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dank voor je feedback! 👋 Vul de velden hieronder zo volledig mogelijk in.
+        _Deze issue-template hoort bij de trainingsportal._
+- type: input
+    id: pagina
+    attributes:
+      label: "Pagina / onderdeel"
+      description: "Welke pagina of sectie? (bijv. docs/firepagina.html of 'Header index')"
+      placeholder: "bijv. docs/contact.html"
+    validations:
+      required: true
+- type: dropdown
+    id: type
+    attributes:
+      label: "Type feedback"
+      description: "Kies wat het beste past."
+      options:
+        - "Bug (technisch)"
+        - "Tekst/inhoud"
+        - "Toegankelijkheid"
+        - "Link kapot"
+        - "Idee/verbetering"
+    validations:
+      required: true
+- type: dropdown
+    id: prioriteit
+    attributes:
+      label: "Prioriteit"
+      options:
+        - "Laag"
+        - "Normaal"
+        - "Hoog"
+    validations:
+      required: true
+- type: textarea
+    id: beschrijving
+    attributes:
+      label: "Korte beschrijving"
+      description: "Wat is het probleem of voorstel in één alinea?"
+      placeholder: "Beschrijf kort wat er mis is of wat beter kan."
+    validations:
+      required: true
+- type: textarea
+    id: stappen
+    attributes:
+      label: "Stappen om te reproduceren (voor bugs)"
+      description: "Hoe konden we het probleem reproduceren?"
+      placeholder: |
+        1. Ga naar ...
+        2. Klik op ...
+        3. Zie foutmelding ...
+      render: bash
+    validations:
+      required: false
+- type: textarea
+    id: verwacht
+    attributes:
+      label: "Verwacht resultaat"
+      placeholder: "Wat had je verwacht dat er zou gebeuren?"
+    validations:
+      required: false
+- type: textarea
+    id: werkelijk
+    attributes:
+      label: "Werkelijk resultaat / foutmelding"
+      placeholder: "Wat gebeurde er daadwerkelijk (inclusief eventuele foutmeldingen)?"
+    validations:
+      required: false
+- type: input
+    id: url
+    attributes:
+      label: "URL"
+      description: "Eventuele publieke link (indien van toepassing)."
+      placeholder: "https://…"
+    validations:
+      required: false
+- type: textarea
+    id: extra
+    attributes:
+      label: "Bijlagen / extra context"
+      description: "Voeg screenshots, logs of context toe."
+      placeholder: "Screenshot: …"
+    validations:
+      required: false
+
+- type: input
+    id: contact
+    attributes:
+      label: "Contact (optioneel)"
+      description: "Jouw e-mail of GitHub-gebruikersnaam voor terugkoppeling."
+      placeholder: "jij@voorbeeld.nl of @gebruikersnaam"
+    validations:
+      required: false
+- type: checkboxes
+    id: akkoord
+    attributes:
+      label: "Akkoord"
+      options:
+        - label: "Ik ga akkoord dat dit issue publiek zichtbaar is."
+          required: true
