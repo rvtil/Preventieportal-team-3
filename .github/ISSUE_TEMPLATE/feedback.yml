@@ -9,7 +9,7 @@ body:
       value: |
         Dank voor je feedback! 👋 Vul de velden hieronder zo volledig mogelijk in.
         _Deze issue-template hoort bij de trainingsportal._
-- type: input
+  - type: input
     id: pagina
     attributes:
       label: "Pagina / onderdeel"
@@ -17,7 +17,7 @@ body:
       placeholder: "bijv. docs/contact.html"
     validations:
       required: true
-- type: dropdown
+  - type: dropdown
     id: type
     attributes:
       label: "Type feedback"
@@ -30,7 +30,7 @@ body:
         - "Idee/verbetering"
     validations:
       required: true
-- type: dropdown
+  - type: dropdown
     id: prioriteit
     attributes:
       label: "Prioriteit"
@@ -40,7 +40,7 @@ body:
         - "Hoog"
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: beschrijving
     attributes:
       label: "Korte beschrijving"
@@ -48,7 +48,7 @@ body:
       placeholder: "Beschrijf kort wat er mis is of wat beter kan."
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: stappen
     attributes:
       label: "Stappen om te reproduceren (voor bugs)"
@@ -60,21 +60,21 @@ body:
       render: bash
     validations:
       required: false
-- type: textarea
+  - type: textarea
     id: verwacht
     attributes:
       label: "Verwacht resultaat"
       placeholder: "Wat had je verwacht dat er zou gebeuren?"
     validations:
       required: false
-- type: textarea
+  - type: textarea
     id: werkelijk
     attributes:
       label: "Werkelijk resultaat / foutmelding"
       placeholder: "Wat gebeurde er daadwerkelijk (inclusief eventuele foutmeldingen)?"
     validations:
       required: false
-- type: input
+  - type: input
     id: url
     attributes:
       label: "URL"
@@ -82,7 +82,7 @@ body:
       placeholder: "https://…"
     validations:
       required: false
-- type: textarea
+  - type: textarea
     id: extra
     attributes:
       label: "Bijlagen / extra context"
@@ -90,8 +90,7 @@ body:
       placeholder: "Screenshot: …"
     validations:
       required: false
-
-- type: input
+  - type: input
     id: contact
     attributes:
       label: "Contact (optioneel)"
@@ -99,7 +98,7 @@ body:
       placeholder: "jij@voorbeeld.nl of @gebruikersnaam"
     validations:
       required: false
-- type: checkboxes
+  - type: checkboxes
     id: akkoord
     attributes:
       label: "Akkoord"
