@@ -32,6 +32,11 @@ Het doel van dit project is niet het opleveren van een productie-website, maar h
   - `script.js` (interactieve tips)
 - `.github/` → workflows en governance-bestanden
 
+  ## Aanvullende doelstelling
+De Preventieportal moet later ook interactieve quizzen bevatten.
+Commit de wijziging (let op: nu commit je in de branch, niet in main).<img width="718" height="69" alt="image" src="https://github.com/user-attachments/assets/2738e763-c1c4-4166-b613-f1a382a9a5c1" />
+
+
 	
 	✅ Checkpoint
 		Repo is online met README en .gitignore.
