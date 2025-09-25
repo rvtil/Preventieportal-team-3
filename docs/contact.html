@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Preventieportal</title>
+  <meta name="description" content="Contactpagina voor de Preventieportal. Neem contact op voor vragen of verbeteringen." />
+  <style>
+    :root{
+      --bg:#0f172a;        /* slate-900 */
+      --panel:#111827;     /* gray-900 */
+      --card:#1f2937;      /* gray-800 */
+      --text:#e5e7eb;      /* gray-200 */
+      --muted:#cbd5e1;     /* slate-300 */
+      --accent:#22c55e;    /* green-500 */
+      --accent-2:#3b82f6;  /* blue-500 */
+      --accent-3:#f59e0b;  /* amber-500 */
+      --ring:#94a3b8;      /* slate-400 */
+      --danger:#ef4444;    /* red-500 */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial}
+    a{color:inherit;text-decoration:none}
+    a:focus,button:focus,input:focus,textarea:focus{outline:2px solid var(--ring);outline-offset:2px}
+    .container{max-width:900px;margin-inline:auto;padding:24px}
+    header{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));border-bottom:1px solid rgba(255,255,255,0.08)}
+    .topbar{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .logo{width:36px;height:36px;border-radius:8px;background:conic-gradient(from 180deg, var(--accent), var(--accent-2), var(--accent-3));display:grid;place-items:center}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 12px;border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,0.08)}
+    main{display:grid;gap:20px}
+    h1{font-size:clamp(26px, 3vw, 34px);margin:18px 0 0}
+    p.muted{color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    @media(min-width:860px){.grid{grid-template-columns:1.1fr 1fr}}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:18px}
+    .field{display:grid;gap:6px;margin-bottom:12px}
+    label{font-weight:600}
+    input,textarea{background:#0b1220;border:1px solid rgba(255,255,255,0.14);color:var(--text);border-radius:10px;padding:10px}
+    .row{display:grid;gap:12px}
+    @media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
+    .btn{display:inline-block;background:var(--accent);color:#06130a;font-weight:700;padding:10px 14px;border-radius:10px;border:1px solid rgba(0,0,0,0.2);cursor:pointer}
+    .btn:hover{filter:brightness(1.05)}
+    .hint{font-size:13px;color:var(--muted)}
+    .danger{color:var(--danger)}
+    footer{margin-top:24px;padding:16px;border-top:1px solid rgba(255,255,255,0.08);color:var(--muted)}
+    .sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;padding:0}
+    .links a{display:inline-block;margin-right:12px;text-decoration:underline}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand" aria-label="Preventieportal">
+        <span class="logo" aria-hidden="true">🛡️</span>
+        <a href="index.html" aria-label="Terug naar start">Preventieportal</a>
+      </div>
+      <nav aria-label="Primaire navigatie">
+        <ul>
+          <li><a href="index.html#tips">Tips</a></li>
+          <li><a href="index.html#downloads">Downloads</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<main class="container" id="content">
+    <h1>Contact</h1>
+    <p class="muted">Vragen, feedback of een verbeteridee voor de Preventieportal? Stuur ons een bericht of gebruik de gegevens hiernaast.</p>
+<section class="grid" aria-labelledby="contact-form-heading">
+      <!-- Formulier -->
+      <article class="card" role="region" aria-labelledby="contact-form-heading">
+        <h2 id="contact-form-heading" class="sr-only">Contactformulier</h2>
+        <!-- Simpel mailto-formulier zonder backend; werkt als fallback -->
+        <form id="contactForm" action="mailto:info@preventieportal.nl" method="post" enctype="text/plain">
+          <div class="row">
+            <div class="field">
+              <label for="naam">Naam</label>
+              <input id="naam" name="Naam" type="text" required autocomplete="name" placeholder="Voor- en achternaam" />
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="E-mail" type="email" required autocomplete="email" placeholder="jij@voorbeeld.nl" />
+            </div>
+          </div>
+<div class="field">
+            <label for="onderwerp">Onderwerp</label>
+            <input id="onderwerp" name="Onderwerp" type="text" required placeholder="Waar gaat je bericht over?" />
+          </div>
+<div class="field">
+            <label for="bericht">Bericht</label>
+            <textarea id="bericht" name="Bericht" rows="6" required placeholder="Beschrijf je vraag of idee..."></textarea>
+            <p class="hint">Let op: dit formulier gebruikt je lokale e-mailclient (mailto). In trainingen is dit voldoende; voor productie voeg je later een eenvoudige backend of service toe.</p>
+          </div>
+<button class="btn" type="submit">Verstuur</button>
+        </form>
+      </article>
+<!-- Gegevens -->
+      <aside class="card" role="complementary" aria-labelledby="contact-gegevens-heading">
+        <h2 id="contact-gegevens-heading">Contactgegevens</h2>
+        <p><strong>Preventieportal (demo)</strong><br/>Voor vragen over tips, suggesties of content.</p>
+        <p>
+          📧 <a href="mailto:info@preventieportal.nl">info@preventieportal.nl</a><br/>
+          ☎️ <a href="tel:+318001234567">0800-1234567</a>
+        </p>
+        <div class="links">
+          🔗 <a href="index.html">Terug naar start</a><br/>
+          🐙 <a href="https://github.com/" rel="noopener">Open GitHub (issues)</a>
+        </div>
+        <p class="hint">Tip: Maak een Issue aan voor feedback. Koppel je branch/PR aan het Issue voor traceerbaarheid.</p>
+      </aside>
+    </section>
+<footer>
+      <small>© <span id="y"></span> Preventieportal – Trainingsdemo. Geen echte servicedesk.</small>
+    </footer>
+  </main>
+
+<script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
