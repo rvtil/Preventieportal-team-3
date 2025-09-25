@@ -1,3 +1,127 @@
-<h1>
-team-3
-</h1>
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preventieportal – Veilig wonen</title>
+  <meta name="description" content="Tips om brand, inbraak en waterschade te voorkomen. Demo-portal voor Git/GitHub training." />
+  <style>
+    :root{
+      --bg:#0f172a; --panel:#111827; --card:#1f2937; --text:#e5e7eb;
+      --muted:#cbd5e1; --accent:#22c55e; --accent-2:#3b82f6; --accent-3:#f59e0b; --ring:#94a3b8;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Arial}
+    a{color:inherit;text-decoration:none}
+    a:focus,button:focus{outline:2px solid var(--ring);outline-offset:2px}
+    .container{max-width:1100px;margin-inline:auto;padding:24px}
+    header{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));border-bottom:1px solid rgba(255,255,255,0.08)}
+    .topbar{display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .logo{width:36px;height:36px;border-radius:8px;background:conic-gradient(from 180deg, var(--accent), var(--accent-2), var(--accent-3));display:grid;place-items:center}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{padding:8px 12px;border-radius:8px}
+    nav a:hover{background:rgba(255,255,255,0.08)}
+    .hero{padding:40px 0}
+    .hero h1{font-size:clamp(28px, 3vw, 38px);margin:0 0 6px}
+    .hero p{color:var(--muted);margin:0}
+    .grid{display:grid;gap:16px;margin-top:28px}
+    @media(min-width:800px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+    .card h3{margin:0}
+    .badge{display:inline-flex;align-items:center;gap:8px;font-weight:600}
+    .pill{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.14);margin-left:8px}
+    .btn{display:inline-block;background:var(--accent);color:#06130a;font-weight:700;padding:10px 14px;border-radius:10px;border:1px solid rgba(0,0,0,0.2)}
+    .btn:hover{filter:brightness(1.05)}
+    .list{padding-left:18px;margin:8px 0 0}
+    footer{margin-top:36px;padding:18px;border-top:1px solid rgba(255,255,255,0.08);color:var(--muted)}
+    .contact{display:grid;gap:8px;background:var(--panel);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:16px;margin-top:24px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand" aria-label="Preventieportal">
+        <span class="logo" aria-hidden="true">🛡️</span>
+        <a href="index.html">Preventieportal</a>
+      </div>
+      <nav aria-label="Primaire navigatie">
+        <ul>
+          <li><a href="#tips">Tips</a></li>
+          <li><a href="#downloads">Downloads</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Inloggen</a></li>
+          <li><a href="https://github.com/" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<main class="container">
+    <section class="hero" id="intro">
+      <h1>Veilig wonen begint hier</h1>
+      <p>Bekijk praktische tips om <strong>brand</strong>, <strong>inbraak</strong> en <strong>waterschade</strong> te voorkomen. Deze portal is onderdeel van de Git/GitHub-trainingscasus.</p>
+    </section>
+<section id="tips" aria-labelledby="tips-heading">
+      <h2 id="tips-heading" class="sr-only">Categorieën met tips</h2>
+      <div class="grid">
+        <!-- Brand -->
+        <article class="card">
+          <div class="badge">🔥 Brandpreventie <span class="pill">Top 3</span></div>
+          <h3><a href="firepagina.html">Voorkom brand in huis</a></h3>
+          <ul class="list">
+            <li>Blaas kaarsen uit bij vertrek of voor het slapen.</li>
+            <li>Gebruik rookmelders (test maandelijks).</li>
+            <li>Laat apparaten niet onnodig stand-by staan.</li>
+          </ul>
+          <p><a class="btn" href="firepagina.html" aria-label="Ga naar brandpreventie">Bekijk alle tips</a></p>
+        </article>
+<!-- Inbraak -->
+        <article class="card">
+          <div class="badge">🔒 Inbraakpreventie <span class="pill">Checklist</span></div>
+          <h3><a href="burglary.html">Maak je woning minder aantrekkelijk</a></h3>
+          <ul class="list">
+            <li>Sluit ramen en deuren altijd goed af.</li>
+            <li>Gebruik buitenverlichting met sensor.</li>
+            <li>Laat geen waardevolle spullen in zicht.</li>
+          </ul>
+          <p><a class="btn" href="burglary.html" aria-label="Ga naar inbraakpreventie">Bekijk alle tips</a></p>
+        </article>
+<!-- Water -->
+        <article class="card">
+          <div class="badge">💧 Waterschade <span class="pill">Preventie</span></div>
+          <h3><a href="water.html">Voorkom lekkage en schade</a></h3>
+          <ul class="list">
+            <li>Controleer leidingen en koppelingen regelmatig.</li>
+            <li>Sluit buitenkranen tijdig af (bij vorst).</li>
+            <li>Houd dakgoten vrij van bladeren.</li>
+          </ul>
+          <p><a class="btn" href="water.html" aria-label="Ga naar waterschade voorkomen">Bekijk alle tips</a></p>
+        </article>
+      </div>
+    </section>
+<section id="downloads" class="contact" aria-labelledby="dl-heading">
+      <h2 id="dl-heading">Downloads</h2>
+      <p>Gebruik deze documenten als startpunt voor je team:</p>
+      <ul class="list">
+        <li><a href="project-overview.md">📄 Project-overview (Markdown)</a></li>
+        <li><a href="checklist.html">✅ Checklist (optioneel, voeg later toe)</a></li>
+      </ul>
+      <p class="muted">Tip: als bestanden nog niet bestaan, maak ze aan via je oefening. De link-check workflow detecteert dode links.</p>
+    </section>
+<section class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Vragen of verbeteringen? Gebruik de contactpagina of dien een Issue in.</p>
+      <p><a class="btn" href="contact.html" aria-label="Ga naar contactpagina">Ga naar contactpagina</a></p>
+      <p class="muted">Of meld feedback via GitHub Issues (gebruik het feedbackformulier in de repo).</p>
+    </section>
+<footer>
+      <small>© <span id="y"></span> Preventieportal – Trainingsdemo. Inhoud alleen ter illustratie.</small>
+    </footer>
+  </main>
+
+<script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
