@@ -41,5 +41,5 @@ Het doel van dit project is niet het opleveren van een productie-website, maar h
 	
 	🤔 Reflectievragen
 		- Hoe helpt een projectdoelstelling om richting te geven, zelfs in een demo-project?
-		- Welke rol zie jij voor jezelf in dit team, en hoe ga je dat terugzien in GitHub
+  		- Welke rol zie jij voor jezelf in dit team, en hoe ga je dat terugzien in GitHub?
   		- Hoe zou Achmea baat hebben bij standaard templates voor projectdocumentatie in GitHub?
