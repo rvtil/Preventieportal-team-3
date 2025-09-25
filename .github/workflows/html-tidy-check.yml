@@ -2,17 +2,21 @@ name: HTML Tidy Check
 on:
   pull_request:
     branches: [ main ]
+
 jobs:
   validate-html:
     runs-on: ubuntu-latest
-steps:
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-- name: Install tidy
+
+      - name: Install tidy
         run: |
           sudo apt-get update
           sudo apt-get install -y tidy
-- name: Validate HTML in docs/
+
+      - name: Validate HTML in docs/
+        shell: bash
         run: |
           shopt -s nullglob
           files=(docs/*.html)
@@ -29,4 +33,3 @@ steps:
             echo "----------------------------------------"
           done
           exit $failed
-
