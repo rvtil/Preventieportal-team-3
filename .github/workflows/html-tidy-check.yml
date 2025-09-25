@@ -15,13 +15,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y tidy
 
-      - name: Validate HTML in docs/
+      - name: Validate HTML in src/
         shell: bash
         run: |
           shopt -s nullglob
-          files=(docs/*.html)
+          files=(src/*.html)
           if [ ${#files[@]} -eq 0 ]; then
-            echo "Geen HTML-bestanden gevonden in docs/. Sla controle over."
+            echo "Geen HTML-bestanden gevonden in src/. Sla controle over."
             exit 0
           fi
           failed=0
